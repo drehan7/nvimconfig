@@ -16,8 +16,14 @@ return require('packer').startup(function(use)
   use({
 	  "rose-pine/neovim",
 	  as = "rose-pine",
+  })
+
+  use({
+	  "andreypopp/vim-colors-plain",
+	  as = "plain",
 	  config = function()
-		  vim.cmd("colorscheme rose-pine")
+          vim.cmd("set background=dark")
+		  vim.cmd("colorscheme plain")
 	  end
   })
 
